@@ -6,10 +6,10 @@ import com.pluralsight.fundamentals.repository.ApplicationRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Query implements GraphQLQueryResolver {
+public class ApplicationQueryResolver implements GraphQLQueryResolver {
     private ApplicationRepository applicationRepository;
 
-    public Query(ApplicationRepository applicationRepository) {
+    public ApplicationQueryResolver(ApplicationRepository applicationRepository) {
         this.applicationRepository = applicationRepository;
     }
 
