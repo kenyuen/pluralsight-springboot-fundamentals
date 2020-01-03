@@ -39,7 +39,7 @@ public class Snack {
         return amount;
     }
 
-    public void setAount(Float amount) {
+    public void setAmount(Float amount) {
         this.amount = amount;
     }
 
