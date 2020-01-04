@@ -1,0 +1,9 @@
+extend type Query {
+    reviews: [Review]
+}
+
+type Review {
+    snackId: ID!
+    rating: Int
+    text: String!
+}
