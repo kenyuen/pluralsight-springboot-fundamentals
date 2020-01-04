@@ -1,5 +1,6 @@
 extend type Query {
     snacks: [Snack]
+    reviews: [Review]
 }
 
 type Snack {
@@ -7,4 +8,10 @@ type Snack {
     name: String
     amount: Float
     ##    reviews: [Review]
+}
+
+type Review {
+    snackId: ID!
+    rating: Int
+    text: String!
 }

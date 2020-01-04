@@ -1,20 +1,20 @@
 package com.pluralsight.fundamentals.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.pluralsight.fundamentals.entity.Snack;
-import com.pluralsight.fundamentals.repository.SnackRepository;
+import com.pluralsight.fundamentals.entity.Review;
+import com.pluralsight.fundamentals.repository.ReviewRepository;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SnackQueryResolver implements GraphQLQueryResolver {
-    private SnackRepository snackRepository;
+public class ReviewQueryResolver implements GraphQLQueryResolver {
+    private ReviewRepository reviewRepository;
 
-    public SnackQueryResolver(SnackRepository snackRepository) {
-        this.snackRepository = snackRepository;
+    public ReviewQueryResolver(ReviewRepository reviewRepository) {
+        this.reviewRepository = reviewRepository;
     }
 
-    public Iterable<Snack> snacks() {
-        return snackRepository.findAll();
+    public Iterable<Review> reviews() {
+        return reviewRepository.findAll();
     }
 
 }

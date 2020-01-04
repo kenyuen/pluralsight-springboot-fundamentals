@@ -9,17 +9,15 @@ public class Review {
     private String id;
     private Integer rating;
     private String text;
+    private String snackId;
 
     public Review() {
     }
 
-    public Review(String id) {
-        this.id = id;
-    }
-
-    public Review(Integer rating, String text) {
+    public Review(Integer rating, String text, String snack_id) {
         this.rating = rating;
         this.text = text;
+        this.snackId = snackId;
     }
 
     public String getId() {
@@ -42,8 +40,16 @@ public class Review {
         this.text = text;
     }
 
+    public String getSnackId() {
+        return snackId;
+    }
+
+    public void setSnack_id(String snackId) {
+        this.snackId = snackId;
+    }
+
     @Override
     public String toString() {
-        return "Review [id=" + id + ", rating=" + rating + ", text=" + text + "]";
+        return "Review [id=" + id + ", rating=" + rating + ", text=" + text + ", snackId=" + snackId + "]";
     }
 }
