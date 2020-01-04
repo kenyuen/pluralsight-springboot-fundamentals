@@ -3,17 +3,19 @@ package com.pluralsight.fundamentals.resolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.pluralsight.fundamentals.entity.Review;
 import com.pluralsight.fundamentals.repository.ReviewRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ReviewQueryResolver implements GraphQLQueryResolver {
     private ReviewRepository reviewRepository;
 
+    @Autowired
     public ReviewQueryResolver(ReviewRepository reviewRepository) {
         this.reviewRepository = reviewRepository;
     }
 
-    public Iterable<Review> reviews() {
+    public Iterable<Review> reviews(String snackID) {
         return reviewRepository.findAll();
     }
 

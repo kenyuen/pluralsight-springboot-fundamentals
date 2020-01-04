@@ -3,12 +3,14 @@ package com.pluralsight.fundamentals.resolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.pluralsight.fundamentals.entity.Snack;
 import com.pluralsight.fundamentals.repository.SnackRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SnackQueryResolver implements GraphQLQueryResolver {
     private SnackRepository snackRepository;
 
+    @Autowired
     public SnackQueryResolver(SnackRepository snackRepository) {
         this.snackRepository = snackRepository;
     }

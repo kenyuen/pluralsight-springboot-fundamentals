@@ -1,5 +1,5 @@
 extend type Query {
-    reviews: [Review]
+    reviews(snackId: ID!): [Review]
 }
 
 type Review {
