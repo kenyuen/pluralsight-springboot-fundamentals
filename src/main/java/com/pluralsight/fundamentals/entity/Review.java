@@ -14,7 +14,7 @@ public class Review {
     public Review() {
     }
 
-    public Review(Integer rating, String text, String snack_id) {
+    public Review(Integer rating, String text, String snackId) {
         this.rating = rating;
         this.text = text;
         this.snackId = snackId;
