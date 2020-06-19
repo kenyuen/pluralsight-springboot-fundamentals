@@ -14,3 +14,8 @@ For MacOS
 
     brew install maven
     
+    
+For MacOS
+
+    brew install maven
+    brew install jdk
